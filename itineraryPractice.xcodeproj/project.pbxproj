@@ -10,7 +10,6 @@
 		CFC462E52182F92F0038087E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC462E42182F92F0038087E /* AppDelegate.swift */; };
 		CFC462EC2182F9330038087E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFC462EB2182F9330038087E /* Assets.xcassets */; };
 		CFC462EF2182F9330038087E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFC462ED2182F9330038087E /* LaunchScreen.storyboard */; };
-		CFC462F72182FB8A0038087E /* Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC462F62182FB8A0038087E /* Function.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,7 +18,6 @@
 		CFC462EB2182F9330038087E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CFC462EE2182F9330038087E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CFC462F02182F9330038087E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CFC462F62182FB8A0038087E /* Function.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Function.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,13 +50,36 @@
 		CFC462E32182F92F0038087E /* itineraryPractice */ = {
 			isa = PBXGroup;
 			children = (
+				CFC462F821832F200038087E /* Model */,
 				CFC462E42182F92F0038087E /* AppDelegate.swift */,
 				CFC462EB2182F9330038087E /* Assets.xcassets */,
 				CFC462ED2182F9330038087E /* LaunchScreen.storyboard */,
 				CFC462F02182F9330038087E /* Info.plist */,
-				CFC462F62182FB8A0038087E /* Function.swift */,
 			);
 			path = itineraryPractice;
+			sourceTree = "<group>";
+		};
+		CFC462F821832F200038087E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CFC462F921832F2B0038087E /* Trip */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CFC462F921832F2B0038087E /* Trip */ = {
+			isa = PBXGroup;
+			children = (
+				CFC462FA21832F420038087E /* New Group */,
+			);
+			path = Trip;
+			sourceTree = "<group>";
+		};
+		CFC462FA21832F420038087E /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,7 +153,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFC462E52182F92F0038087E /* AppDelegate.swift in Sources */,
-				CFC462F72182FB8A0038087E /* Function.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
