@@ -13,8 +13,17 @@ class TripFunctions {
         
     }
     
-    static func readTrip() {
+    static func readTrip(completion: @escaping () -> ()) {
+        DispatchQueue.global(qos: .userInteractive).async {
+            if Data.tripModels.count == 0 {
+                Data.tripModels.append(TripModel(title: "Trip to China!"))
+                Data.tripModels.append(TripModel(title: "Mexico"))
+            }
+        DispatchQueue.main.async {
+            completion()
+        }
         
+        }
     }
     
     static func updateTrip(tripModel: TripModel) {
