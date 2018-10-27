@@ -8,33 +8,48 @@
 
 import UIKit
 
-class TripsViewController: UIViewController, UITableViewDataSource {
+class TripsViewController: UIViewController  {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var addBtn: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.dataSource = self
+        tableView.delegate = self
         
         TripFunctions.readTrip(completion:  { [weak self] in
             self?.tableView.reloadData()
         })
-    }
+        
+        view.backgroundColor = Theme.background
+        addBtn.styleAsFloatingButton()
 
+        
+    }
+    
+    
+    
+}
+
+extension TripsViewController: UITableViewDataSource, UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Data.tripModels.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCell(withIdentifier: "cell")
-        if cell == nil {
-           cell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "cell")
-        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! TripsTableViewCell
         
-        cell?.textLabel?.text = Data.tripModels[indexPath.row].title
+        cell.setup(tripModel: Data.tripModels[indexPath.row])
         
-        return cell!
+        return cell
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 160
+}
     
 }

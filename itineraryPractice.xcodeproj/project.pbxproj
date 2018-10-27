@@ -15,6 +15,16 @@
 		CFC46300218331ED0038087E /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC462FF218331ED0038087E /* Data.swift */; };
 		CFC4630721834C180038087E /* TripsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFC4630621834C180038087E /* TripsViewController.storyboard */; };
 		CFC4630921834E060038087E /* TripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC4630821834E060038087E /* TripsViewController.swift */; };
+		CFC4630B21835D1F0038087E /* TripsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC4630A21835D1F0038087E /* TripsTableViewCell.swift */; };
+		CFC4630F218419DC0038087E /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC4630E218419DC0038087E /* UIViewExtensions.swift */; };
+		CFC4631221841EE50038087E /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC4631121841EE50038087E /* Theme.swift */; };
+		CFC46314218425BD0038087E /* Righteous-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CFC46313218425BD0038087E /* Righteous-Regular.ttf */; };
+		CFC46316218429DA0038087E /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFC46315218429DA0038087E /* Colors.xcassets */; };
+		CFC4631821844A9C0038087E /* UIButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC4631721844A9C0038087E /* UIButtonExtensions.swift */; };
+		CFC4631A21844FB80038087E /* AddTripViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFC4631921844FB80038087E /* AddTripViewController.storyboard */; };
+		CFC4631D21844FF30038087E /* AddTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC4631C21844FF30038087E /* AddTripViewController.swift */; };
+		CFC46320218459480038087E /* PopupUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC4631F218459480038087E /* PopupUIView.swift */; };
+		CFC4632221845AA00038087E /* AppUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC4632121845AA00038087E /* AppUIButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +38,16 @@
 		CFC462FF218331ED0038087E /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Data.swift; path = itineraryPractice/Data.swift; sourceTree = SOURCE_ROOT; };
 		CFC4630621834C180038087E /* TripsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = TripsViewController.storyboard; path = itineraryPractice/VIews/TripsViewController/TripsViewController.storyboard; sourceTree = SOURCE_ROOT; };
 		CFC4630821834E060038087E /* TripsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsViewController.swift; sourceTree = "<group>"; };
+		CFC4630A21835D1F0038087E /* TripsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsTableViewCell.swift; sourceTree = "<group>"; };
+		CFC4630E218419DC0038087E /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		CFC4631121841EE50038087E /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		CFC46313218425BD0038087E /* Righteous-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Righteous-Regular.ttf"; sourceTree = "<group>"; };
+		CFC46315218429DA0038087E /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		CFC4631721844A9C0038087E /* UIButtonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtensions.swift; sourceTree = "<group>"; };
+		CFC4631921844FB80038087E /* AddTripViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddTripViewController.storyboard; sourceTree = "<group>"; };
+		CFC4631C21844FF30038087E /* AddTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripViewController.swift; sourceTree = "<group>"; };
+		CFC4631F218459480038087E /* PopupUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupUIView.swift; sourceTree = "<group>"; };
+		CFC4632121845AA00038087E /* AppUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUIButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +80,7 @@
 		CFC462E32182F92F0038087E /* itineraryPractice */ = {
 			isa = PBXGroup;
 			children = (
+				CFC4631021841ECA0038087E /* Resources */,
 				CFC462F821832F200038087E /* Model */,
 				CFC4630121834B510038087E /* Views */,
 				CFC462E42182F92F0038087E /* AppDelegate.swift */,
@@ -91,6 +112,7 @@
 		CFC4630121834B510038087E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CFC4631B21844FC40038087E /* AddTripViewController */,
 				CFC4630221834B5B0038087E /* TripsViewController */,
 			);
 			path = Views;
@@ -100,9 +122,49 @@
 			isa = PBXGroup;
 			children = (
 				CFC4630621834C180038087E /* TripsViewController.storyboard */,
+				CFC4630A21835D1F0038087E /* TripsTableViewCell.swift */,
 				CFC4630821834E060038087E /* TripsViewController.swift */,
 			);
 			path = TripsViewController;
+			sourceTree = "<group>";
+		};
+		CFC4630C218419A10038087E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CFC4630E218419DC0038087E /* UIViewExtensions.swift */,
+				CFC4631721844A9C0038087E /* UIButtonExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CFC4631021841ECA0038087E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CFC4631E218459080038087E /* CustomsControls */,
+				CFC4630C218419A10038087E /* Extensions */,
+				CFC46313218425BD0038087E /* Righteous-Regular.ttf */,
+				CFC46315218429DA0038087E /* Colors.xcassets */,
+				CFC4631121841EE50038087E /* Theme.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CFC4631B21844FC40038087E /* AddTripViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CFC4631921844FB80038087E /* AddTripViewController.storyboard */,
+				CFC4631C21844FF30038087E /* AddTripViewController.swift */,
+			);
+			path = AddTripViewController;
+			sourceTree = "<group>";
+		};
+		CFC4631E218459080038087E /* CustomsControls */ = {
+			isa = PBXGroup;
+			children = (
+				CFC4631F218459480038087E /* PopupUIView.swift */,
+				CFC4632121845AA00038087E /* AppUIButton.swift */,
+			);
+			path = CustomsControls;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,8 +225,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFC4631A21844FB80038087E /* AddTripViewController.storyboard in Resources */,
+				CFC46316218429DA0038087E /* Colors.xcassets in Resources */,
 				CFC4630721834C180038087E /* TripsViewController.storyboard in Resources */,
 				CFC462EF2182F9330038087E /* LaunchScreen.storyboard in Resources */,
+				CFC46314218425BD0038087E /* Righteous-Regular.ttf in Resources */,
 				CFC462EC2182F9330038087E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -176,11 +241,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFC4630B21835D1F0038087E /* TripsTableViewCell.swift in Sources */,
+				CFC4631221841EE50038087E /* Theme.swift in Sources */,
+				CFC4630F218419DC0038087E /* UIViewExtensions.swift in Sources */,
 				CFC462FC21832FDD0038087E /* TripModel.swift in Sources */,
 				CFC462E52182F92F0038087E /* AppDelegate.swift in Sources */,
+				CFC4631D21844FF30038087E /* AddTripViewController.swift in Sources */,
 				CFC462FE21832FF60038087E /* TripFunctions.swift in Sources */,
+				CFC4632221845AA00038087E /* AppUIButton.swift in Sources */,
+				CFC4631821844A9C0038087E /* UIButtonExtensions.swift in Sources */,
 				CFC46300218331ED0038087E /* Data.swift in Sources */,
 				CFC4630921834E060038087E /* TripsViewController.swift in Sources */,
+				CFC46320218459480038087E /* PopupUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
