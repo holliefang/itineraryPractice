@@ -64,7 +64,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="icons8-plus-math-filled-50"/>
                                 <connections>
-                                    <segue destination="Con-iu-GPi" kind="presentation" identifier="toAddTripSegue" id="N60-6t-zSU"/>
+                                    <segue destination="Uv9-r1-U3V" kind="presentation" id="N60-6t-zSU"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -79,11 +79,18 @@
             </objects>
             <point key="canvasLocation" x="120.8" y="89.505247376311857"/>
         </scene>
-        <!--AddTripViewController-->
-        <scene sceneID="7Lr-m0-vp2">
+        <!--View Controller-->
+        <scene sceneID="h0e-1s-bCX">
             <objects>
-                <viewControllerPlaceholder storyboardName="AddTripViewController" id="Con-iu-GPi" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IdA-qM-Sca" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="Uv9-r1-U3V" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rxx-rm-r7M">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.39792915239726029" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="xZX-5N-7f8"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SGT-hx-edx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="794" y="90"/>
         </scene>
