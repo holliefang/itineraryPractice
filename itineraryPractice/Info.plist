@@ -45,5 +45,7 @@
 	<array>
 		<string>Righteous-Regular.ttf</string>
 	</array>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Add photos to your trips!</string>
 </dict>
 </plist>
