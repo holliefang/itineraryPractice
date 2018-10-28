@@ -1,25 +1,25 @@
-//
-//  AddTripViewController.swift
-//  itineraryPractice
-//
-//  Created by Sihan Fang on 2018/10/27.
-//  Copyright © 2018 Sihan Fang. All rights reserved.
-//
+    //
+    //  AddTripViewController.swift
+    //  itineraryPractice
+    //
+    //  Created by Sihan Fang on 2018/10/27.
+    //  Copyright © 2018 Sihan Fang. All rights reserved.
+    //
 
-import Photos
-import UIKit
+    import Photos
+    import UIKit
 
-class AddTripViewController: UIViewController {
+    class AddTripViewController: UIViewController {
 
     @IBOutlet weak var TripTextField: UITextField!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var imagaView: UIImageView!
-    
+
     var doneSaving: (() -> ())?
-    
-    
+    var tripIndexToEdit: Int?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -32,12 +32,20 @@ class AddTripViewController: UIViewController {
         titleLabel.layer.shadowColor = UIColor.white.cgColor
         titleLabel.layer.shadowOffset = CGSize.zero
         titleLabel.layer.cornerRadius = 5
+        
+        if let index = tripIndexToEdit {
+            let trip = Data.tripModels[index]
+            titleLabel.text = "Edit Trip"
+            TripTextField.text = trip.title
+            imagaView.image = trip.image
+            
+        }
     }
-    
+
     @IBAction func cancel(_ sender: Any) {
         dismiss(animated: true)
     }
-    
+
     @IBAction func save(_ sender: Any) {
         TripTextField.rightViewMode = .never
         
@@ -51,35 +59,40 @@ class AddTripViewController: UIViewController {
             TripTextField.rightView = imageView
             
             //show red background
-//            TripTextField.backgroundColor = #colorLiteral(red: 0.9525896256, green: 0.3187139993, blue: 0.3022343031, alpha: 1)
+    //            TripTextField.backgroundColor = #colorLiteral(red: 0.9525896256, green: 0.3187139993, blue: 0.3022343031, alpha: 1)
             
             //red boarder
-//            TripTextField.layer.borderColor = UIColor.red.cgColor
-//            TripTextField.layer.borderWidth = 1
-//            TripTextField.layer.cornerRadius = 5
-//
+    //            TripTextField.layer.borderColor = UIColor.red.cgColor
+    //            TripTextField.layer.borderWidth = 1
+    //            TripTextField.layer.cornerRadius = 5
+    //
             TripTextField.placeholder = "Please enter something!"
             
             
             return
         }
-        TripFunctions.createTrip(tripModel: TripModel(title: newTripName, image: imagaView.image))
         
+        if let index = tripIndexToEdit {
+            TripFunctions.updateTrip(at: index, title: newTripName, image: imagaView.image)
+            } else {
+            TripFunctions.createTrip(tripModel: TripModel(title: newTripName, image: imagaView.image))
+
+        }
+
         if let doneSaving = doneSaving {
             doneSaving()
         }
         dismiss(animated: true)
     }
-    
+
     fileprivate func presentPhotoPickerController() {
         let myPickerController = UIImagePickerController()
         myPickerController.delegate = self
         myPickerController.sourceType = .photoLibrary
         self.present(myPickerController, animated: true)
     }
-    
+
     @IBAction func addPhoto(_ sender: UIButton) {
-        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
             PHPhotoLibrary.requestAuthorization { (status) in
                 switch status {
                 case .authorized:
@@ -110,14 +123,14 @@ class AddTripViewController: UIViewController {
 
                 }
             }
-        }
+        
     }
-    
-    
-}
 
 
-extension AddTripViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    }
+
+
+    extension AddTripViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[.originalImage] as? UIImage {
             self.imagaView.image = image
@@ -125,5 +138,5 @@ extension AddTripViewController: UIImagePickerControllerDelegate, UINavigationCo
         
         dismiss(animated: true)
     }
-    
-}
+
+    }

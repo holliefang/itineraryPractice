@@ -121,9 +121,9 @@
 		CFC4630221834B5B0038087E /* TripsViewController */ = {
 			isa = PBXGroup;
 			children = (
+				CFC4630821834E060038087E /* TripsViewController.swift */,
 				CFC4630621834C180038087E /* TripsViewController.storyboard */,
 				CFC4630A21835D1F0038087E /* TripsTableViewCell.swift */,
-				CFC4630821834E060038087E /* TripsViewController.swift */,
 			);
 			path = TripsViewController;
 			sourceTree = "<group>";
